@@ -1,0 +1,70 @@
+
+.loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba($color: #fff, $alpha: 0.95);
+  
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 2s;
+  
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+$cd-bars: #9356dc;
+$size: 3px;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / 5;
+
+.load {
+  width: $size*10;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  &__bar {
+      background-color: $cd-bars;
+      height: 100px;
+      width: $size;
+      animation: bars $anim-dur ease-in-out backwards infinite;
+      animation-direction: alternate;
+      @for $i from 1 through 5 {
+          &--#{$i} {
+              animation-delay: $anim-delay * $i;
+          }
+      }
+  }
+}
+
+@keyframes bars {
+  0% {
+      transform: scaleY(0.5);
+      
+  }
+  100% {
+      transform: scaleY(1.0);
+  }
+}
