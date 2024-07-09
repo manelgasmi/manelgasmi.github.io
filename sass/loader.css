@@ -1,3 +1,4 @@
+/****loader-container's animation***/
 .loader-container {
   position: fixed;
   width: 100%;
@@ -12,23 +13,21 @@
   animation-delay: 2s;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  99% {
     opacity: 0;
-    z-index: 0;
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    height: 0;
+    width: 0;
   }
 }
+/****bars's animation*****/
 .load {
   width: 30px;
   height: 100px;

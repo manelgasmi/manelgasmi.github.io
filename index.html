@@ -46,7 +46,12 @@
       <main>
         <section class="adress__section">
           <i class="fa-solid fa-location-dot"></i>
-          <input class="search" type="text" name="ville" value="Paris, Belleville" />
+          <input
+            class="search"
+            type="text"
+            name="ville"
+            value="Paris, Belleville"
+          />
         </section>
         <section class="first-section bg-grey">
           <div class="container">
@@ -63,23 +68,23 @@
         <section class="functionning-section container">
           <h2 class="section-title">Fonctionnement</h2>
           <section class="steps__functionning">
-            <article class="article__functionning card">
+            <article class="steps__functionning--article card">
               <span>1</span>
-              <div class="article__functionning--content">
+              <div class="steps__functionning--content">
                 <i class="fa-solid fa-mobile-screen-button article__i"></i>
                 <p>Choisissez un restaurant</p>
               </div>
             </article>
-            <article class="article__functionning card">
+            <article class="steps__functionning--article card">
               <span>2</span>
-              <div class="article__functionning--content">
+              <div class="steps__functionning--content">
                 <i class="fa-solid fa-list-ul article__i"></i>
                 <p>Composez votre menu</p>
               </div>
             </article>
-            <article class="article__functionning card">
+            <article class="steps__functionning--article card">
               <span>3</span>
-              <div class="article__functionning--content">
+              <div class="steps__functionning--content">
                 <i class="fa-solid fa-store clr-store article__i--store"></i>
                 <p>Dégustez au restaurant</p>
               </div>
@@ -91,96 +96,101 @@
             <h2 class="section-title" id="explorer-nos-restaurants">
               Restaurants
             </h2>
-            <div class="restaurants-cards">
-              <article class="card">
-                <div class="new">
-                  <span>Nouveau</span>
-                </div>
+            <div class="restaurants__cards">
+              <article class="card card__shadow" id="rest-1">
+                <span class="restaurants__cards--new">Nouveau</span>
                 <a href="restaurants/rest1.html">
                   <img
                     src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                     alt="photo d'un repas"
                   />
                 </a>
-                <div class="card-content">
+                <div class="card__content">
                   <a href="restaurants/rest1.html">
-                    <div class="txt-card">
-                      <h3 class="card-title">La palette du goût</h3>
-                      <p class="card-subtitle">Ménilmontant</p>
+                    <div class="card__content--txt">
+                      <h3 class="card__content--title">La palette du goût</h3>
+                      <p class="card__content--subtitle">Ménilmontant</p>
                     </div>
                   </a>
                   <div class="heart-container">
-                    <i class="fa-regular fa-heart heart"></i>
-                    <i class="fa-solid fa-heart heart fa-gradient"></i>
+                    <i class="fa-regular fa-heart heart-container__heart"></i>
+                    <i
+                      class="fa-solid fa-heart heart-container__heart fa-gradient"
+                    ></i>
                   </div>
                 </div>
               </article>
-              <article class="card">
-                <div class="new">
-                  <span>Nouveau</span>
-                </div>
-                <a href="">
+              <article class="card card__shadow" id="rest-3">
+                <span class="restaurants__cards--new">Nouveau</span>
+
+                <a href="restaurants/rest3.html">
                   <img
                     src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                     alt="photo d'un repas"
                   />
                 </a>
 
-                <div class="card-content">
+                <div class="card__content">
                   <a href="">
-                    <div class="txt-card">
-                      <h3 class="card-title">La note enchantée</h3>
-                      <p class="card-subtitle">Charonne</p>
+                    <div class="card__content--txt">
+                      <h3 class="card__content--title">La note enchantée</h3>
+                      <p class="card__content--subtitle">Charonne</p>
                     </div>
                   </a>
 
                   <div class="heart-container">
-                    <i class="fa-regular fa-heart heart"></i>
-                    <i class="fa-solid fa-heart heart fa-gradient"></i>
+                    <i class="fa-regular fa-heart heart-container__heart"></i>
+                    <i
+                      class="fa-solid fa-heart heart-container__heart fa-gradient"
+                    ></i>
                   </div>
                 </div>
               </article>
-              <article class="card">
-                <a href="">
+              <article class="card card__shadow" id="rest-4">
+                <a href="restaurants/rest4.html">
                   <img
                     src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                     alt="photo d'un repas"
                   />
                 </a>
 
-                <div class="card-content">
+                <div class="card__content">
                   <a href="">
-                    <div class="txt-card">
-                      <h3 class="card-title">A la française</h3>
-                      <p class="card-subtitle">Cité Rouge</p>
+                    <div class="card__content--txt">
+                      <h3 class="card__content--title">À la française</h3>
+                      <p class="card__content--subtitle">Cité Rouge</p>
                     </div>
                   </a>
 
                   <div class="heart-container">
-                    <i class="fa-regular fa-heart heart"></i>
-                    <i class="fa-solid fa-heart heart fa-gradient"></i>
+                    <i class="fa-regular fa-heart heart-container__heart"></i>
+                    <i
+                      class="fa-solid fa-heart heart-container__heart fa-gradient"
+                    ></i>
                   </div>
                 </div>
               </article>
-              <article class="card">
-                <a href="">
+              <article class="card card__shadow" id="rest-2">
+                <a href="restaurants/rest2.html">
                   <img
                     src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                     alt="photo d'un repas"
                   />
                 </a>
 
-                <div class="card-content">
+                <div class="card__content">
                   <a href="">
-                    <div class="txt-card">
-                      <h3 class="card-title">La délice des sens</h3>
-                      <p class="card-subtitle">Folie-Méricourt</p>
+                    <div class="card__content--txt">
+                      <h3 class="card__content--title">Le délice des sens</h3>
+                      <p class="card__content--subtitle">Folie-Méricourt</p>
                     </div>
                   </a>
 
                   <div class="heart-container">
-                    <i class="fa-regular fa-heart heart"></i>
-                    <i class="fa-solid fa-heart heart fa-gradient"></i>
+                    <i class="fa-regular fa-heart heart-container__heart"></i>
+                    <i
+                      class="fa-solid fa-heart heart-container__heart fa-gradient"
+                    ></i>
                   </div>
                 </div>
               </article>
@@ -189,7 +199,9 @@
         </section>
       </main>
       <footer>
-        <h3 class="logo-footer">ohmyfood</h3>
+        <a href="">
+          <h3 class="logo-footer">ohmyfood</h3>
+        </a>
         <div class="nav-bar">
           <nav>
             <ul>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="restaurants.css" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header class="header">
+        <a href="../index.html#rest-2">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <a href="../index.html">
+          <img
+            src="../assets/images/logo/ohmyfood@2x.svg"
+            alt="Logo ohmyfood"
+            id="logo"
+          />
+        </a>
+      </header>
+      <main>
+        <img
+          class="rest-img"
+          src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+          alt="photo d'un repas"
+        />
+        <section class="rest__container bg-grey container">
+          <div class="rest__container--title">
+            <h1>Le délice des sens</h1>
+            <div class="heart-container">
+              <i class="fa-regular fa-heart heart-container__heart"></i>
+              <i
+                class="fa-solid fa-heart heart-container__heart fa-gradient"
+              ></i>
+            </div>
+          </div>
+          <div
+            class="menu__cards menu-cards--animation menu-cards--animation-1"
+          >
+            <h3 class="menu__cards--title">ENTRÉES</h3>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-1"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-1">
+                  <span class="card__content--title">Tartare de thon</span>
+                  <span class="card__content--subtitle"
+                    >Assaisonné au yuzu</span
+                  >
+                </label>
+                <label class="card__content--price" for="checkmenu-1">
+                  <strong>25€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-2"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-2">
+                  <span class="card__content--title"
+                    >Bouchée de homard croustillant</span
+                  >
+                  <span class="card__content--subtitle"
+                    >Et sa farandole de petits légumes</span
+                  >
+                </label>
+                <label class="card__content--price" for="checkmenu-2">
+                  <strong>35€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-3"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-3">
+                  <span class="card__content--title">Poulet rôti aux herbes de Provence</span>
+                  <span class="card__content--subtitle">
+                    Et sa crème de truffe
+                  </span>
+                </label>
+                <label class="card__content--price" for="checkmenu-3">
+                  <strong>40€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            class="menu__cards menu-cards--animation menu-cards--animation-2"
+          >
+            <h3 class="menu__cards--title">PLATS</h3>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-4"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-4">
+                  <span class="card__content--title"
+                    >Poulet de rôti aux herbes de Provence</span
+                  >
+                  <span class="card__content--subtitle">
+                    Et sa crème de truffe
+                  </span>
+                </label>
+                <label class="card__content--price" for="checkmenu-4">
+                  <strong>40€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-5"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-5">
+                  <span class="card__content--title"
+                    >Langouste rôtie</span
+                  >
+                  <span class="card__content--subtitle">
+                    Et ses légumes de saison
+                  </span>
+                </label>
+                <label class="card__content--price" for="checkmenu-5">
+                  <strong>35€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-6"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-6">
+                  <span class="card__content--title">Côte de bœuf Angus</span>
+                  <span class="card__content--subtitle">Et sa purée de panais</span>
+                </label>
+                <label class="card__content--price" for="checkmenu-6">
+                  <strong>44€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            class="menu__cards menu-cards--animation menu-cards--animation-3"
+          >
+            <h3 class="menu__cards--title">DESSERT</h3>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-7"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-7">
+                  <span class="card__content--title">Farandole de desserts</span>
+                  <span class="card__content--subtitle">Du chef</span>
+                </label>
+                <label class="card__content--price" for="checkmenu-7">
+                  <strong>18€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-8"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-8">
+                  <span class="card__content--title"
+                    >Crème brulée</span
+                  >
+                  <span class="card__content--subtitle"
+                    >Revisitée</span
+                  >
+                </label>
+                <label class="card__content--price" for="checkmenu-8">
+                  <strong>22€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <input
+                type="checkbox"
+                class="menu-checkbox hidden-ckeckbox"
+                id="checkmenu-9"
+              />
+              <div class="card__content">
+                <label class="card__content--txt" for="checkmenu-9">
+                  <span class="card__content--title">Tiramisu</span>
+                  <span class="card__content--subtitle">
+                    À la noisette
+                  </span>
+                </label>
+                <label class="card__content--price" for="checkmenu-9">
+                  <strong>23€</strong>
+                </label>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="rest-btn">
+            <button class="btn">
+              <span>Commander</span>
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <a href="">
+          <h3 class="logo-footer">ohmyfood</h3>
+        </a>
+        <div class="nav-bar">
+          <nav>
+            <ul>
+              <li>
+                <a href=""
+                  ><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><i class="fa-solid fa-handshake-angle"></i>Devenir
+                  partenaire</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <ul>
+              <li><a href="">Mentions légales</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

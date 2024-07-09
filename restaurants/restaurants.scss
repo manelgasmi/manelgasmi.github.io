@@ -1,7 +1,6 @@
 @import "../sass/style.scss"; /*the same style of index.html*/
 
 .header {
-  display: flex;
   i {
     font-size: 20px;
     position: absolute;
@@ -14,12 +13,17 @@
   width: 100%;
   object-fit: cover;
 }
-.rest-container {
+.rest__container {
   border-radius: 30px;
   margin-top: -50px;
   position: relative;
   &.container {
     padding: 40px 20px;
+  }
+  &--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   h1 {
     font-family: Shrikhand, serif;
@@ -28,64 +32,58 @@
   }
 }
 
-.title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu-title {
-  font-weight: normal;
-  margin-bottom: 20px;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 45px;
-    height: 3px;
-    background-color: $clr-bg-new;
-  }
-}
-.menu-cards {
+.menu__cards {
   margin-top: 40px;
+  &--title {
+    font-weight: normal;
+    margin-bottom: 20px;
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 45px;
+      height: 3px;
+      background-color: $clr-bg-new;
+    }
+  }
+  .card__content {
+    padding-left: 0;
+    overflow: hidden;
+    justify-content: initial;
+    &--txt {
+      width: 85%;
+      transition: 0.5s ease-in-out;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    &--title,
+    &--subtitle {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 15px;
+    }
+    &--price {
+      width: 15%;
+      padding-top: 22px;
+      padding-left: 10px;
+    }
+  }
 
   .card {
     padding-left: 15px;
     overflow: hidden;
-    .card-content {
-      padding-left: 0;
-      overflow: hidden;
-      justify-content: initial;
-    }
   }
-}
-
-.txt-card {
-  width: 85%;
-  transition: 0.5s ease-in-out;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  .card-title,
-  .card-subtitle {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 15px;
-  }
-}
-.menu-price {
-  width: 15%;
-  padding-top: 22px;
-  padding-left: 10px;
 }
 
 .hidden-ckeckbox {
   display: none;
 }
-/*animation of menu-cards*/
+/*****animation of menu__cards*****/
 @keyframes slideUp {
   from {
     transform: translateY(20px);
@@ -124,7 +122,7 @@
   transition: 0.3s ease;
   &__circle {
     @include flex-center;
-    background-color: #fff;
+    background-color: $clr-txt-ftr;
     border-radius: 50%;
     height: 25px;
     width: 25px;
@@ -134,33 +132,33 @@
   }
 }
 
-input.menu-checkbox:checked + .card-content {
+input.menu-checkbox:checked + .card__content {
   .checkbox {
     margin-right: 0;
   }
 }
-
+/****media queries desktop version****/
 @media (min-width: 1024px) {
-  .title-container {
+  .rest__container--title {
     justify-content: center;
     gap: 30px;
     h1 {
       width: auto;
     }
   }
-  .menu-cards {
+  .menu__cards {
     .card {
-      .card-content {
+      &__content {
         &:hover {
           .checkbox {
             margin-right: 0;
           }
         }
-        .txt-card {
+        &--txt {
           width: 95%;
         }
 
-        .menu-price {
+        &--price {
           width: 5%;
         }
         .checkbox {
@@ -169,32 +167,33 @@ input.menu-checkbox:checked + .card-content {
       }
     }
   }
-  input.menu-checkbox:checked + .card-content {
-    .txt-card {
+
+  input.menu-checkbox:checked + .card__content {
+    &--txt {
       width: 95%;
     }
   }
+  
   h1 {
     text-align: center;
   }
 }
 
 /*****media queries tablet version*****/
-/****j'ai répété le code du desktop***/
 @media (min-width: 768px) and (max-width: 1023px) {
-  .menu-cards {
+  .menu__cards {
     .card {
-      .card-content {
+      &__content {
         &:hover {
           .checkbox {
             margin-right: 0;
           }
         }
-        .txt-card {
+        &--txt {
           width: 90%;
         }
 
-        .menu-price {
+        &--price {
           width: 10%;
         }
         .checkbox {

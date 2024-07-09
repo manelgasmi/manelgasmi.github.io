@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/****loader-container's animation***/
 .loader-container {
   position: fixed;
   width: 100%;
@@ -13,23 +13,21 @@
   animation-delay: 2s;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  99% {
     opacity: 0;
-    z-index: 0;
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    height: 0;
+    width: 0;
   }
 }
+/****bars's animation*****/
 .load {
   width: 30px;
   height: 100px;
@@ -68,6 +66,17 @@
     transform: scaleY(1);
   }
 }
+/****Basic styles for small screens (mobile first)****/
+* {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
 h1,
 h2,
 h3 {
@@ -77,10 +86,6 @@ h3 {
 
 h1 {
   font-weight: 500;
-}
-
-* {
-  font-family: Roboto, sans-serif;
 }
 
 a {
@@ -97,12 +102,6 @@ a {
   margin: auto;
   padding: 0 20px;
   box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  margin: 0;
 }
 
 .header {
@@ -178,9 +177,14 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
+  padding-bottom: 35px;
 }
-
-.article__functionning {
+.steps__functionning--content {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+.steps__functionning--article {
   height: 72px;
   background-color: #f6f6f6;
   font-weight: bold;
@@ -188,15 +192,10 @@ body {
   align-items: center;
   width: 100%;
 }
-.article__functionning--content {
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-}
-.article__functionning.card {
+.steps__functionning--article.card {
   background-color: #f6f6f6;
 }
-.article__functionning span {
+.steps__functionning--article span {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -205,7 +204,7 @@ body {
   align-items: center;
   border: #9356dc solid 1px;
   background-color: #9356dc;
-  color: white;
+  color: #ffffff;
   position: absolute;
   margin-left: -11px;
   text-align: center;
@@ -232,37 +231,32 @@ body {
   position: relative;
   background-color: #ffffff;
 }
-.card .card-content {
+.card__content {
   padding-left: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.card .card-content .txt-card .card-title {
+.card__content--title {
   margin-bottom: 5px;
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
   display: block;
 }
-.card .card-content .txt-card .card-subtitle {
+.card__content--subtitle {
   margin-top: 0;
   margin-bottom: 1em;
   display: block;
 }
+.card__shadow {
+  box-shadow: 0px 4px 4px -7px rgba(0, 0, 0, 0.1);
+}
 
-.restaurants-cards {
+.restaurants__cards {
   padding-bottom: 50px;
 }
-.restaurants-cards img {
-  height: 231px;
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.restaurants-cards .new {
+.restaurants__cards--new {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,27 +269,33 @@ body {
   position: absolute;
   right: 15px;
   top: 20px;
-}
-.restaurants-cards .new span {
   color: #008766;
+}
+.restaurants__cards img {
+  height: 231px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .heart-container {
   width: 25px;
   height: 25px;
   margin-right: 30px;
+  /****heart's animation****/
 }
-
-i.heart {
+.heart-container__heart {
   padding-right: 25px;
   font-size: 25px;
   position: absolute;
 }
-i.heart.fa-solid {
+.heart-container__heart.fa-solid {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-i.heart.fa-solid:hover, i.heart.fa-solid:focus, i.heart.fa-solid:visited {
+.heart-container__heart.fa-solid:hover, .heart-container__heart.fa-solid:focus, .heart-container__heart.fa-solid:visited {
   opacity: 1;
 }
 
@@ -306,6 +306,7 @@ i.heart.fa-solid:hover, i.heart.fa-solid:focus, i.heart.fa-solid:visited {
   -webkit-text-fill-color: transparent;
 }
 
+/****footer bloc*****/
 footer {
   background-color: #353535;
   color: #ffffff;
@@ -313,7 +314,7 @@ footer {
   width: 100%;
 }
 footer h3 {
-  color: white;
+  color: #ffffff;
   font-family: Shrikhand, serif;
   font-weight: 300;
   margin-top: 0;
@@ -324,32 +325,38 @@ footer h3 {
 footer i {
   width: 15px;
 }
-
-ul {
+footer ul {
   list-style: none;
   margin: 0;
   padding-inline-start: 20px;
 }
-ul li {
+footer ul li {
   padding-top: 5px;
 }
-ul i {
+footer ul i {
   padding-right: 15px;
 }
 
 /*****media queries Desktop version****/
 @media (min-width: 1024px) {
+  .header {
+    box-shadow: 0px 5px 6px -6px rgba(0, 0, 0, 0.1);
+  }
   .container {
     max-width: 1055px;
   }
-  .restaurants-cards {
+  .adress__section {
+    box-shadow: none;
+  }
+  .restaurants__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
   }
-  .restaurants-cards .card {
-    min-width: 30rem;
+  .restaurants__cards .card {
+    width: 30rem;
+    max-width: 48%;
   }
   footer {
     display: flex;
@@ -378,7 +385,6 @@ ul i {
   }
 }
 /*****media queries tablet version*****/
-/****j'ai répété le code du desktop***/
 @media (min-width: 768px) and (max-width: 1023px) {
   footer {
     display: flex;
@@ -391,11 +397,11 @@ ul i {
   }
   .nav-bar {
     display: flex;
-    padding-right: 60px;
   }
   ul {
     display: flex;
     padding-top: 50px;
+    gap: 10px;
   }
   ul li {
     padding-right: 6px;
@@ -406,20 +412,20 @@ ul i {
     gap: 20px;
     padding-bottom: 30px;
   }
-  .steps__functionning .article__functionning--content {
+  .steps__functionning--content {
     padding-left: 24px;
     font-size: 14px;
   }
   .steps__functionning i {
     padding-right: 9px;
   }
-  .restaurants-cards {
+  .restaurants__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
   }
-  .restaurants-cards .card {
+  .restaurants__cards .card {
     width: 46%;
   }
 }/*# sourceMappingURL=style.css.map */
